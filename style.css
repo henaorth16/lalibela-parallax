@@ -1,0 +1,93 @@
+@font-face {
+    font-family: ethiopic;
+    src: url(chiret-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    font-family: cursive;
+    font-weight: 100;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: -3;
+}
+
+.hero > img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grad{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.411), rgb(17, 19, 7));
+    z-index: 100;
+}
+.back{
+    height: 100%;
+    background-color: black;
+    background-blend-mode: multiply;
+    z-index: 10;
+}
+.hero .text{
+    font-size: 13rem;
+    font-family: ethiopic;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    color: #fff;
+    transform: translateX(-50%);
+    letter-spacing: 25px;
+    mix-blend-mode: color-dodge;
+    
+}
+@media screen and (max-width:620px) {
+    .hero .text{
+        font-size: 8rem;
+    }
+}
+.main{
+    text-align: center;
+    text-align: justify;
+    padding: 2rem 4rem;
+    font-size: 19px;
+    line-height: 1.6;
+    z-index: 3;
+    background-color: #1b1910;
+    color: #fff;
+}
+.main::after{
+    content: "";
+    position: absolute;
+    top: -750px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #e72f01;
+    z-index: 2000;
+}
+h1{
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.main p {
+    margin-bottom: 1rem;
+}
